@@ -83,23 +83,24 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           _onPageChangeEvent(page.toDouble());
         },
         controller: _pageController,
-        children: <Widget>[
-          OnBoardWidget(
-            title: "Exercises",
-            subTitle: "To Your Personalized Profile",
-            imagePath: "onboard1",
-          ),
-          OnBoardWidget(
-            title: "Keep Eye On Health Tracking",
-            subTitle: "Log & reminder your activities",
-            imagePath: "onboard2",
-          ),
-          OnBoardWidget(
-            title: "Check Your Progress",
-            subTitle: "An tracking calendar",
-            imagePath: "onboard3",
-          ),
-        ],
+        children: <Widget>[_onBoardFirst, _onBoardSecond, _onBoardSecond],
+      );
+
+  Widget get _onBoardFirst => OnBoardWidget(
+        title: "Exercises",
+        subTitle: "To Your Personalized Profile",
+        imagePath: "onboard1",
+      );
+
+  Widget get _onBoardSecond => OnBoardWidget(
+        title: "Keep Eye On Health Tracking",
+        subTitle: "Log & reminder your activities",
+        imagePath: "onboard2",
+      );
+  Widget get _onBoardThird => OnBoardWidget(
+        title: "Check Your Progress",
+        subTitle: "An tracking calendar",
+        imagePath: "onboard3",
       );
 
   Widget get _pageIndicator => ListView.builder(
@@ -131,22 +132,4 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           style: onBoardingNextButtonStyle,
         ),
       );
-
-      //TRASH!
-  // Widget get _nextButton => RaisedButton(
-  //       child: Text(
-  //         "NEXT",
-  //         style: onBoardingNextButtonStyle,
-  //       ),
-  //       shape: OutlineInputBorder(
-  //           borderRadius: BorderRadius.circular(UIHelper.Space25),
-  //           borderSide: BorderSide(color: Colors.white10)),
-  //       color: Colors.yellow,
-  //       onPressed: () {
-  //         _onPageChangeEvent(_currentPageIndex);
-  //         _pageController.nextPage(
-  //             duration: Duration(milliseconds: UIHelper.ONBOARD_NEXT_DURATION),
-  //             curve: Curves.easeIn);
-  //       },
-  //     );
 }
