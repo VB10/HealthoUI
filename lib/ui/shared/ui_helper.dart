@@ -18,5 +18,6 @@ class UIHelper {
   static const double Space15 = 15;
   static const double Space25 = 25;
   static const double Space35 = 35;
+  static const double Space50 = 50;
   static const double Space200 = 400;
 }

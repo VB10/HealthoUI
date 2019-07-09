@@ -5,10 +5,10 @@ import 'package:healthoui/ui/views/login/onboarding_view.dart';
 import 'package:healthoui/ui/views/login/splash_view.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.blue, // navigation bar color
-    statusBarColor: Colors.pink, // status bar color
-  ));
+  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  //   systemNavigationBarColor: Colors.blue, // navigation bar color
+  //   statusBarColor: Colors.pink, // status bar color
+  // ));
   runApp(MyApp());
 }
 

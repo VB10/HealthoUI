@@ -73,7 +73,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       );
 
   Widget get _indicatorPageView => SizedBox(
-      height: 50, width: UIHelper.dynamicWidth(300), child: _pageIndicator);
+      height: UIHelper.Space50, width: UIHelper.dynamicWidth(300), child: _pageIndicator);
 
   Widget get _nextButtonWrap => SizedBox(
       width: UIHelper.dynamicHeight(UIHelper.Space200), child: _nextButton);
