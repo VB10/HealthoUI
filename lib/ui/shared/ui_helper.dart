@@ -9,7 +9,7 @@ class UIHelper {
   static dynamicHeight(double height) => ScreenUtil.instance.setHeight(height);
   static dynamicWidth(double width) => ScreenUtil.instance.setWidth(width);
   static const int SPLASH_DURATION = 500;
-  static const int ONBOARD_NEXT_DURATION = 500;
+  static const int ONBOARD_NEXT_DURATION = 1000;
 
   static const int ONBOARD_PAGE_COUNT = 3;
 
