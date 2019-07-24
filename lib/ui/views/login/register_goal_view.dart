@@ -12,7 +12,7 @@ class UserRegisterGoalView extends StatefulWidget {
 }
 
 class _UserRegisterGoalViewState extends State<UserRegisterGoalView> {
-  int _selectedCard = 0;
+  int _selectCardIndex = 0;
   List<String> goalCardList;
 
   @override
@@ -67,11 +67,11 @@ class _UserRegisterGoalViewState extends State<UserRegisterGoalView> {
 
   void _cardOnTap(int index) {
     setState(() {
-      _selectedCard = index;
+      _selectCardIndex = index;
     });
   }
 
-  Color _backgroundColor(int index) => _selectedCard == index
+  Color _backgroundColor(int index) => _selectCardIndex == index
       ? phoneVerifyButtonColor
       : Colors.grey[UIHelper.Space300.toInt()];
 }

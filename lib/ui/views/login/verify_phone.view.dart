@@ -46,54 +46,8 @@ class _VerifyViewState extends State<VerifyPhoneView> {
             flex: 2,
           ),
           Expanded(
-            flex: 16,
-            child: _isVerifyComplete
-                ? _succesVerifyView
-                : Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      _titleText,
-                      UIHelper.verticalSpace,
-                      Row(
-                        children: <Widget>[
-                          Expanded(
-                            flex: 3,
-                            child: _circleTextField(
-                                node: _firstFocus, nextNode: _secondFocus),
-                          ),
-                          Spacer(),
-                          Expanded(
-                              flex: 3,
-                              child: _circleTextField(
-                                  node: _secondFocus,
-                                  nextNode: _thirdFocus,
-                                  backNode: _firstFocus)),
-                          Spacer(),
-                          Expanded(
-                            flex: 3,
-                            child: _circleTextField(
-                                node: _thirdFocus,
-                                nextNode: _fourthFocus,
-                                backNode: _secondFocus),
-                          ),
-                          Spacer(),
-                          Expanded(
-                            flex: 3,
-                            child: _circleTextField(
-                                node: _fourthFocus, backNode: _thirdFocus),
-                          ),
-                        ],
-                      ),
-                      UIHelper.verticalSpace,
-                      _nextButtonWrapFilled,
-                      UIHelper.verticalSpace,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[_changeNumber, _resendText],
-                      )
-                    ],
-                  ),
-          ),
+              flex: 16,
+              child: _isVerifyComplete ? _succesVerifyView : _inputPhoneView),
           Spacer(
             flex: 2,
           ),
@@ -168,6 +122,51 @@ class _VerifyViewState extends State<VerifyPhoneView> {
           "VERIFY",
           style: onBoardingNextButtonStyle,
         ),
+      );
+
+  Widget get _inputPhoneView => Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          _titleText,
+          UIHelper.verticalSpace,
+          Row(
+            children: <Widget>[
+              Expanded(
+                flex: 3,
+                child:
+                    _circleTextField(node: _firstFocus, nextNode: _secondFocus),
+              ),
+              Spacer(),
+              Expanded(
+                  flex: 3,
+                  child: _circleTextField(
+                      node: _secondFocus,
+                      nextNode: _thirdFocus,
+                      backNode: _firstFocus)),
+              Spacer(),
+              Expanded(
+                flex: 3,
+                child: _circleTextField(
+                    node: _thirdFocus,
+                    nextNode: _fourthFocus,
+                    backNode: _secondFocus),
+              ),
+              Spacer(),
+              Expanded(
+                flex: 3,
+                child:
+                    _circleTextField(node: _fourthFocus, backNode: _thirdFocus),
+              ),
+            ],
+          ),
+          UIHelper.verticalSpace,
+          _nextButtonWrapFilled,
+          UIHelper.verticalSpace,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[_changeNumber, _resendText],
+          )
+        ],
       );
 
   Widget get _succesVerifyView => Column(
