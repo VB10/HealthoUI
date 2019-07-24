@@ -6,7 +6,7 @@ A Flutter Project for ui.
 
 Look at youtube/hardwareandro or twitter/10VBacik
 
-> Medium series [TR]  [HeatlhoUIMediumPost]([https://link](https://medium.com/flutter-t%C3%BCrkiye/flutter-healtho-ui-ad72c823e8b2))
+> Medium series [TR]  [HeatlhoUIMediumPost](https://medium.com/flutter-t%C3%BCrkiye/flutter-healtho-ui-ad72c823e8b2)
 
 
 
