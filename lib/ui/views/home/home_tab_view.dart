@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthoui/ui/shared/constants.dart';
+import 'package:healthoui/ui/views/home/settings_view.dart';
 
 class HomeTabView extends StatefulWidget {
   @override
@@ -28,18 +29,14 @@ class _HomeTabViewState extends State<HomeTabView> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Container(
-              color: Colors.red,
-            ),
+            SettingsView(),
             Container(
               color: Colors.blue,
             ),
             Container(
               color: Colors.green,
             ),
-            Container(
-              color: Colors.yellow,
-            ),
+            Container(),
           ],
         ),
       ),
