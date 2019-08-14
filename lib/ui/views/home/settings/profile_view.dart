@@ -71,6 +71,7 @@ class _ProfileViewState extends State<ProfileView> {
 
   Widget get _appBar => AppBar(
         elevation: 0,
+        centerTitle: false,
         title: Text("Profile"),
         brightness: Brightness.light,
         leading: IconButton(

@@ -66,7 +66,11 @@ class _SettingsViewState extends State<SettingsView> {
       color: UIHelper.SETTINGS_CARD_BACKGROUND_COLOR,
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(UIHelper.Space10)),
-      child: ListTile(title: Text("Profile"), leading: _profileIcon),
+      child: ListTile(
+        title: Text("Profile"),
+        leading: _profileIcon,
+        onTap: () => Navigator.of(context).pushNamed("/profile"),
+      ),
     );
   }
 

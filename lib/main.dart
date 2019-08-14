@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         SystemUiOverlayStyle(statusBarColor: Colors.white));
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/profile",
+      initialRoute: "/hometab",
       theme: ThemeData(fontFamily: "Poppins"),
       routes: {
         // "/": (context) => SplashView(),
