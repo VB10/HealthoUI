@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthoui/ui/views/home/home_tab_view.dart';
+import 'package:healthoui/ui/views/home/settings/profile_view.dart';
 import 'package:healthoui/ui/views/login/login_view.dart';
 import 'package:healthoui/ui/views/login/onboarding_view.dart';
 import 'package:healthoui/ui/views/login/phone_view.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         SystemUiOverlayStyle(statusBarColor: Colors.white));
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/hometab",
+      initialRoute: "/profile",
       theme: ThemeData(fontFamily: "Poppins"),
       routes: {
         // "/": (context) => SplashView(),
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         "/userRegister": (context) => UserRegisterView(),
         "/userGoal": (context) => UserRegisterGoalView(),
         "/hometab": (context) => HomeTabView(),
+        "/profile": (context) => ProfileView(),
       },
     );
   }

@@ -55,6 +55,8 @@ class _HomeTabViewState extends State<HomeTabView> {
   Widget _tabProfileIcon({String url}) {
     return Tab(
       child: FlatButton(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
         onPressed: () {},
         child: Center(
           child: CircleAvatar(

@@ -13,6 +13,17 @@ final onBoardingNextButtonStyle = TextStyle(fontWeight: FontWeight.w600);
 final onBoardingTitleTextStyle =
     TextStyle(fontWeight: FontWeight.bold, fontSize: UIHelper.Space25);
 
+final profileHeaderCardTitle =
+    TextStyle(fontSize: 18, color: Colors.black, fontWeight: FontWeight.w700);
+final profileHeaderCardSubTitle =
+    TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.w600);
+final profileHeaderCardNormalTitle =
+    TextStyle(fontSize: 12, color: Colors.black, fontWeight: FontWeight.w400);
+
+
+
+
+
 final onBoardingSubTitleTextStyle =
     TextStyle(fontWeight: FontWeight.w400, fontSize: UIHelper.Space15);
 final phoneTextInputHintTextStyle = TextStyle(
