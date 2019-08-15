@@ -10,10 +10,17 @@ class HomeTabView extends StatefulWidget {
   _HomeTabViewState createState() => _HomeTabViewState();
 }
 
-class _HomeTabViewState extends State<HomeTabView> {
+class _HomeTabViewState extends State<HomeTabView>
+    with SingleTickerProviderStateMixin {
+  /// save current page state
   int _currentPageIndex = 0;
 
-  AppBar get _appBar{
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  AppBar get _appBar {
     return AppBar(
       brightness: Brightness.dark,
       backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
@@ -27,11 +34,11 @@ class _HomeTabViewState extends State<HomeTabView> {
   String get _appBarTitle {
     switch (_currentPageIndex) {
       case 0:
-        return Constants.SETTINGS_TITLE;
+        return Constants.NOTIFICATION_TITLE;
       case 1:
         return Constants.REMINDER_TITLE;
       default:
-        return Constants.NOTIFICATION_TITLE;
+        return Constants.SETTINGS_TITLE;
     }
   }
 
@@ -44,7 +51,7 @@ class _HomeTabViewState extends State<HomeTabView> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: Constants.TABBAR_COUNT,
       child: Scaffold(
         appBar: _appBar,
         bottomNavigationBar: BottomAppBar(
@@ -67,10 +74,11 @@ class _HomeTabViewState extends State<HomeTabView> {
           ),
         ),
         body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           children: <Widget>[
-            SettingsView(),
-            ReminderView(),
             NotifiactionView(),
+            ReminderView(),
+            SettingsView(),
             Container(),
           ],
         ),
