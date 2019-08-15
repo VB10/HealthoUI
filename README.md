@@ -1,5 +1,7 @@
 # healthoui
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5cbeed06d9e14e349a4496acbb3f505e)](https://app.codacy.com/app/VB10/HealthoUI?utm_source=github.com&utm_medium=referral&utm_content=VB10/HealthoUI&utm_campaign=Badge_Grade_Dashboard)
+
 A Flutter Project for ui.
 
 ## Getting Started
