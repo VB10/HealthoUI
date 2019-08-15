@@ -19,6 +19,8 @@ final profileHeaderCardSubTitle =
     TextStyle(fontSize: 15, color: Colors.black, fontWeight: FontWeight.w600);
 final profileHeaderCardNormalTitle =
     TextStyle(fontSize: 12, color: Colors.black, fontWeight: FontWeight.w400);
+final profileHeaderCardNormalYellowTitle =
+    TextStyle(fontSize: 12, color: Colors.yellow[600], fontWeight: FontWeight.w600);
 
 
 

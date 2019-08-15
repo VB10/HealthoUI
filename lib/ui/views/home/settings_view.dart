@@ -19,14 +19,6 @@ class _SettingsViewState extends State<SettingsView> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          brightness: Brightness.light,
-          backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
-          leading: Image.asset(UIHelper.MENU_ICON),
-          title: Text(Constants.SETTINGS_TITLE),
-          centerTitle: false,
-          actions: <Widget>[_rigtActionItem],
-        ),
         body: ListView(
           children: <Widget>[
             UIHelper.verticalSpace,
