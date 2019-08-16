@@ -10,18 +10,13 @@ class HomeTabView extends StatefulWidget {
   _HomeTabViewState createState() => _HomeTabViewState();
 }
 
-class _HomeTabViewState extends State<HomeTabView>
-    with SingleTickerProviderStateMixin {
+class _HomeTabViewState extends State<HomeTabView> {
   /// save current page state
   int _currentPageIndex = 0;
 
-  @override
-  void initState() {
-    super.initState();
-  }
-
   AppBar get _appBar {
     return AppBar(
+      /// [StatusBar] color light
       brightness: Brightness.dark,
       backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
       leading: Image.asset(UIHelper.MENU_ICON),
@@ -31,6 +26,7 @@ class _HomeTabViewState extends State<HomeTabView>
     );
   }
 
+  /// get [AppBar] title
   String get _appBarTitle {
     switch (_currentPageIndex) {
       case 0:
@@ -41,6 +37,8 @@ class _HomeTabViewState extends State<HomeTabView>
         return Constants.SETTINGS_TITLE;
     }
   }
+
+  /// get [SearchBar] icon
 
   Widget get _rigtActionItem => Chip(
         label: Icon(Icons.search),
@@ -55,12 +53,12 @@ class _HomeTabViewState extends State<HomeTabView>
       child: Scaffold(
         appBar: _appBar,
         bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
           child: TabBar(
             labelPadding: EdgeInsets.all(0),
             indicatorColor: Colors.transparent,
             labelColor: Colors.black,
             onTap: (int index) {
+              /// [TabBar] item ontab reload view.
               setState(() {
                 _currentPageIndex = index;
               });
@@ -86,12 +84,10 @@ class _HomeTabViewState extends State<HomeTabView>
     );
   }
 
+  /// Default [Tab] item  
   Widget _tabBarItem({IconData icon}) {
     return Tab(
-      icon: Icon(
-        icon,
-        color: Colors.grey,
-      ),
+      icon: Icon(icon, color: Colors.grey),
     );
   }
 
