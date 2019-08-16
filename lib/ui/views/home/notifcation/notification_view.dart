@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:healthoui/ui/shared/constants.dart';
 import 'package:healthoui/ui/shared/text_style.dart';
 import 'package:healthoui/ui/shared/ui_helper.dart';
 

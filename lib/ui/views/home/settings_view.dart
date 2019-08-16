@@ -98,7 +98,7 @@ class _SettingsViewState extends State<SettingsView> {
               builder: (BuildContext context) {
                 return _buildBottomPicker(
                   CupertinoPicker(
-                    itemExtent: 50,
+                    itemExtent: UIHelper.Space50,
                     backgroundColor: CupertinoColors.white,
                     onSelectedItemChanged: (int index) {
                       _tempSelectedIndex = index;
