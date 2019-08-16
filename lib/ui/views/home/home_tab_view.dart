@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:healthoui/ui/shared/constants.dart';
 import 'package:healthoui/ui/shared/ui_helper.dart';
@@ -17,7 +19,7 @@ class _HomeTabViewState extends State<HomeTabView> {
   AppBar get _appBar {
     return AppBar(
       /// [StatusBar] color light
-      brightness: Brightness.dark,
+      brightness: Platform.isAndroid ? Brightness.light : Brightness.dark,
       backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
       leading: Image.asset(UIHelper.MENU_ICON),
       title: Text(_appBarTitle),
@@ -39,7 +41,6 @@ class _HomeTabViewState extends State<HomeTabView> {
   }
 
   /// get [SearchBar] icon
-
   Widget get _rigtActionItem => Chip(
         label: Icon(Icons.search),
         backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
@@ -84,7 +85,7 @@ class _HomeTabViewState extends State<HomeTabView> {
     );
   }
 
-  /// Default [Tab] item  
+  /// Default [Tab] item
   Widget _tabBarItem({IconData icon}) {
     return Tab(
       icon: Icon(icon, color: Colors.grey),
