@@ -4,6 +4,8 @@
 
 A Flutter Project for ui.
 
+[![Codemagic build status](https://api.codemagic.io/apps/5d5c9c096722395cf808f810/5d5c9c096722395cf808f80f/status_badge.svg)](https://codemagic.io/apps/5d5c9c096722395cf808f810/5d5c9c096722395cf808f80f/latest_build)
+
 ## Getting Started
 
 Look at youtube/hardwareandro or twitter/10VBacik
