@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,7 +39,7 @@ class _PhoneViewState extends State<PhoneView> {
       );
 
   Widget get _titleTextStyle => Text(
-        "Enter your Mobile Number",
+        AppLocalizations.of(context).tr('phoneViewTitle'),
         style: phoneTitleTextStyle,
       );
 
