@@ -2,6 +2,7 @@ class Constants {
   static const String PROFILE_IMAGE =
       "https://avatars0.githubusercontent.com/u/17102578?s=460&v=4";
 
+  static final RegExp phoneRegexp = RegExp(r"^\d{5}$");
   static const int REMINDER_COUNT = 5;
   static const int TABBAR_COUNT = 4;
 
