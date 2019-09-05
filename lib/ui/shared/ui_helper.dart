@@ -8,6 +8,10 @@ class UIHelper {
   static const String GOOGLE_ICON = "assets/images/google_logo.png";
   static const String MENU_ICON = "assets/icons/menu.png";
 
+
+  static const String PERSONAL_TRAINER = "assets/images/personal_trainer.png";
+
+
   static const Color SETTINGS_APP_BAR_COLOR = Color.fromRGBO(16, 43, 70, 1);
   static const Color REMINDER_CARD_YELLOW = Color.fromRGBO(241, 196, 14, 100);
   static const Color SETTINGS_CARD_BACKGROUND_COLOR =

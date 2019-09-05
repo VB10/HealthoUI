@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthoui/ui/views/home/home_tab_view.dart';
 import 'package:healthoui/ui/views/home/settings/profile_view.dart';
+import 'package:healthoui/ui/views/home/tips/sub/health_tips_detail_view.dart';
 import 'package:healthoui/ui/views/login/login_view.dart';
 import 'package:healthoui/ui/views/login/onboarding_view.dart';
 import 'package:healthoui/ui/views/login/phone_view.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
         title: 'Material App',
-        initialRoute: "/",
+        initialRoute: "/hometab",
         locale: data.savedLocale,
         theme: ThemeData(fontFamily: "Poppins"),
         routes: {
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
           "/userGoal": (context) => UserRegisterGoalView(),
           "/hometab": (context) => HomeTabView(),
           "/profile": (context) => ProfileView(),
+          "/healthTipsDetail": (context) => HealthTipsDetailView(),
         },
       ),
     );

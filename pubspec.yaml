@@ -26,6 +26,7 @@ flutter:
     - assets/images/onboard1.png
     - assets/images/onboard2.png
     - assets/images/onboard3.png
+    - assets/images/personal_trainer.png
     - assets/images/facebook_logo.png
     - assets/images/google_logo.png
     - assets/images/login_health.png
