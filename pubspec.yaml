@@ -30,6 +30,15 @@ flutter:
     - assets/images/facebook_logo.png
     - assets/images/google_logo.png
     - assets/images/login_health.png
+    - assets/images/exercises/1.png
+    - assets/images/exercises/2.png
+    - assets/images/exercises/3.png
+    - assets/images/exercises/4.png
+    - assets/images/exercises/5.png
+    - assets/images/exercises/6.png
+    - assets/images/exercises/7.png
+    - assets/images/exercises/8.png
+
     - assets/icons/menu.png
     - assets/langs/tr-TR.json
     - assets/langs/en-US.json
