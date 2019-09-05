@@ -12,6 +12,8 @@ import 'package:healthoui/ui/views/login/register_view.dart';
 import 'package:healthoui/ui/views/login/verify_phone.view.dart';
 import 'package:healthoui/ui/views/login/verify_view.dart';
 
+import 'ui/views/home/physiques/pysiques_view.dart';
+
 void main() {
   // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
   //   systemNavigationBarColor: Colors.blue, // navigation bar color
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
         title: 'Material App',
-        initialRoute: "/hometab",
+        initialRoute: "/physiques",
         locale: data.savedLocale,
         theme: ThemeData(fontFamily: "Poppins"),
         routes: {
@@ -50,6 +52,7 @@ class MyApp extends StatelessWidget {
           "/hometab": (context) => HomeTabView(),
           "/profile": (context) => ProfileView(),
           "/healthTipsDetail": (context) => HealthTipsDetailView(),
+          "/physiques": (context) => PysiquesView()
         },
       ),
     );
