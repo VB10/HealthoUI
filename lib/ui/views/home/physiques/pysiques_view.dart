@@ -80,8 +80,7 @@ class _PysiquesViewState extends State<PysiquesView> {
       context: context,
       builder: (BuildContext context) {
         return NumberPickerDialog.decimal(
-          maxText: "kg",
-          minText: "wh",
+    
           minValue: 1,
           maxValue: 5,
           decimalPlaces: 2,

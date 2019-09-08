@@ -8,7 +8,6 @@ class HealthTipsDetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     HealthTips tipItem = ModalRoute.of(context).settings.arguments;
-    print(tipItem);
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,

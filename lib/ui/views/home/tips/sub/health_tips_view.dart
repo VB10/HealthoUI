@@ -34,37 +34,34 @@ class _HealthTipsViewState extends State<HealthTipsView> {
   }
 
   Widget _card(HealthTips tips) => InkWell(
-        onTap: () {
-          Navigator.of(context).pushNamed("/healthTipsDetail",arguments: tips);
-        },
+        onTap: () => Navigator.of(context)
+            .pushNamed("/healthTipsDetail", arguments: tips),
         child: Card(
-          margin: EdgeInsets.only(top: 20),
+          margin: EdgeInsets.only(top: UIHelper.Space20),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20))),
+                  bottomLeft: Radius.circular(UIHelper.Space20),
+                  bottomRight: Radius.circular(UIHelper.Space20))),
           child: Container(
-            height: 250,
+            height: UIHelper.Space250,
             child: Stack(
               children: <Widget>[
                 Positioned.fill(
-                  // Container height - 20
-                  top: 80,
-                  child: Image.asset(tips.image, fit: BoxFit.fill),
-                ),
+                    // Container height - 20
+                    top: UIHelper.Space80,
+                    child: Image.asset(tips.image, fit: BoxFit.fill)),
                 Container(
-                  height: 100,
+                  height: UIHelper.Space100,
                   decoration: BoxDecoration(
                     color: UIHelper.SETTINGS_CARD_BACKGROUND_COLOR,
                     borderRadius: BorderRadius.vertical(
-                        bottom: Radius.circular(10), top: Radius.circular(10)),
+                      bottom: Radius.circular(UIHelper.Space10),
+                      top: Radius.circular(UIHelper.Space10),
+                    ),
                   ),
                   child: ListTile(
                     title: Text(tips.title),
-                    subtitle: Text(
-                      tips.subTitle,
-                      maxLines: 2,
-                    ),
+                    subtitle: Text(tips.subTitle, maxLines: 2),
                   ),
                 )
               ],
