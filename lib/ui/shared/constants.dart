@@ -9,6 +9,7 @@ class Constants {
   static const String SETTINGS_TITLE = "Settings";
   static const String REMINDER_TITLE = "Reminder";
   static const String NOTIFICATION_TITLE = "Notification";
+  static const String TIPS = "Tips";
 
   static const String LANGUAGE_OPTIONS = "Language Options";
   static const String HEALTH_DATA = "Health Data";
@@ -17,6 +18,11 @@ class Constants {
   static const String FEEDBACK = "FeedBack";
   static const String RATE_US = "Rate Us";
   static const String LOG_OUT = "Log Out";
+
+  static const String HEALTH_TIPS = "Health Tips";
+  static const String HEALTH_EXERCISES = "Exercises";
+  static const String HEALTH_WORKOUT_PLAN = "Health Workout Plan";
+
 
   static const List<String> LANGUAGES = ["Eng", "Tr"];
 }

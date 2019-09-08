@@ -14,6 +14,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter: 8.5.0
   easy_localization: 1.3.1
+  numberpicker:
+    git:
+      url: https://github.com/VB10/NumberPicker.git
+
   # flutter_lottie : 0.2.0
 dev_dependencies:
   flutter_test:
@@ -26,9 +30,19 @@ flutter:
     - assets/images/onboard1.png
     - assets/images/onboard2.png
     - assets/images/onboard3.png
+    - assets/images/personal_trainer.png
     - assets/images/facebook_logo.png
     - assets/images/google_logo.png
     - assets/images/login_health.png
+    - assets/images/exercises/1.png
+    - assets/images/exercises/2.png
+    - assets/images/exercises/3.png
+    - assets/images/exercises/4.png
+    - assets/images/exercises/5.png
+    - assets/images/exercises/6.png
+    - assets/images/exercises/7.png
+    - assets/images/exercises/8.png
+
     - assets/icons/menu.png
     - assets/langs/tr-TR.json
     - assets/langs/en-US.json

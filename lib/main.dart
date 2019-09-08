@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthoui/ui/views/home/home_tab_view.dart';
 import 'package:healthoui/ui/views/home/settings/profile_view.dart';
+import 'package:healthoui/ui/views/home/tips/sub/health_tips_detail_view.dart';
 import 'package:healthoui/ui/views/login/login_view.dart';
 import 'package:healthoui/ui/views/login/onboarding_view.dart';
 import 'package:healthoui/ui/views/login/phone_view.dart';
@@ -10,6 +11,8 @@ import 'package:healthoui/ui/views/login/register_goal_view.dart';
 import 'package:healthoui/ui/views/login/register_view.dart';
 import 'package:healthoui/ui/views/login/verify_phone.view.dart';
 import 'package:healthoui/ui/views/login/verify_view.dart';
+
+import 'ui/views/home/physiques/pysiques_view.dart';
 
 void main() {
   // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -33,7 +36,7 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
         title: 'Material App',
-        initialRoute: "/",
+        initialRoute: "/physiques",
         locale: data.savedLocale,
         theme: ThemeData(fontFamily: "Poppins"),
         routes: {
@@ -48,6 +51,8 @@ class MyApp extends StatelessWidget {
           "/userGoal": (context) => UserRegisterGoalView(),
           "/hometab": (context) => HomeTabView(),
           "/profile": (context) => ProfileView(),
+          "/healthTipsDetail": (context) => HealthTipsDetailView(),
+          "/physiques": (context) => PysiquesView()
         },
       ),
     );

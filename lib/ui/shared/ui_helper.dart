@@ -8,10 +8,13 @@ class UIHelper {
   static const String GOOGLE_ICON = "assets/images/google_logo.png";
   static const String MENU_ICON = "assets/icons/menu.png";
 
+  static const String PERSONAL_TRAINER = "assets/images/personal_trainer.png";
+
   static const Color SETTINGS_APP_BAR_COLOR = Color.fromRGBO(16, 43, 70, 1);
   static const Color REMINDER_CARD_YELLOW = Color.fromRGBO(241, 196, 14, 100);
   static const Color SETTINGS_CARD_BACKGROUND_COLOR =
       Color.fromRGBO(252, 252, 251, 1);
+  static const Color EXERCISES_CARD_BOTTOM = Color.fromRGBO(241, 196, 14, 1);
 
   static dynamicHeight(double height) => ScreenUtil.instance.setHeight(height);
   static dynamicWidth(double width) => ScreenUtil.instance.setWidth(width);
@@ -32,8 +35,10 @@ class UIHelper {
   static const double Space30 = 30;
   static const double Space35 = 35;
   static const double Space50 = 50;
+  static const double Space80 = 80;
   static const double Space100 = 100;
-  static const double Space200 = 400;
+  static const double Space200 = 200;
+  static const double Space250 = 250;
   static const double Space500 = 500;
   static const double Space300 = 300;
 
@@ -47,5 +52,4 @@ class UIHelper {
   static Widget get horizontalSpace => SizedBox(
         width: dynamicWidth(Space35),
       );
-
 }

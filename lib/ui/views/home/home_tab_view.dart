@@ -6,6 +6,7 @@ import 'package:healthoui/ui/shared/ui_helper.dart';
 import 'package:healthoui/ui/views/home/notifcation/notification_view.dart';
 import 'package:healthoui/ui/views/home/reminder/reminder_view.dart';
 import 'package:healthoui/ui/views/home/settings_view.dart';
+import 'package:healthoui/ui/views/home/tips/user_programs_view.dart';
 
 class HomeTabView extends StatefulWidget {
   @override
@@ -21,6 +22,7 @@ class _HomeTabViewState extends State<HomeTabView> {
       /// [StatusBar] color light
       brightness: Platform.isAndroid ? Brightness.light : Brightness.dark,
       backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
+      elevation: 0,
       leading: Image.asset(UIHelper.MENU_ICON),
       title: Text(_appBarTitle),
       centerTitle: false,
@@ -35,8 +37,10 @@ class _HomeTabViewState extends State<HomeTabView> {
         return Constants.NOTIFICATION_TITLE;
       case 1:
         return Constants.REMINDER_TITLE;
+      case 2:
+        return Constants.REMINDER_TITLE;
       default:
-        return Constants.SETTINGS_TITLE;
+        return Constants.TIPS;
     }
   }
 
@@ -78,7 +82,7 @@ class _HomeTabViewState extends State<HomeTabView> {
             NotifiactionView(),
             ReminderView(),
             SettingsView(),
-            Container(),
+            UserProgramsView(),
           ],
         ),
       ),
@@ -97,7 +101,8 @@ class _HomeTabViewState extends State<HomeTabView> {
       child: FlatButton(
         highlightColor: Colors.transparent,
         splashColor: Colors.transparent,
-        onPressed: () {},
+
+        // onPressed: () {},
         child: Center(
           child: CircleAvatar(
             backgroundImage: NetworkImage(url),
