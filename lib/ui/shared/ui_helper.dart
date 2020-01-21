@@ -53,3 +53,19 @@ class UIHelper {
         width: dynamicWidth(Space35),
       );
 }
+
+class FontSizeValue {
+  static const double NORMAL = 25;
+  static const double HIGH = 20;
+  static const double MEDIUM = 15;
+  static const double LOW = 13;
+  static const double VERY_LOW = 10;
+}
+
+class SpaceValue {
+  static const double NORMAL = 40;
+  static const double HIGH = 60;
+  static const double MEDIUM = 30;
+  static const double LOW = 20;
+  static const double VERY_LOW = 15;
+}

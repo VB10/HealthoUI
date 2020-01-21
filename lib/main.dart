@@ -1,18 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:healthoui/ui/views/home/home_tab_view.dart';
-import 'package:healthoui/ui/views/home/settings/profile_view.dart';
-import 'package:healthoui/ui/views/home/tips/sub/health_tips_detail_view.dart';
-import 'package:healthoui/ui/views/login/login_view.dart';
-import 'package:healthoui/ui/views/login/onboarding_view.dart';
-import 'package:healthoui/ui/views/login/phone_view.dart';
-import 'package:healthoui/ui/views/login/register_goal_view.dart';
-import 'package:healthoui/ui/views/login/register_view.dart';
-import 'package:healthoui/ui/views/login/verify_phone.view.dart';
-import 'package:healthoui/ui/views/login/verify_view.dart';
 
+import 'ui/shared/theme.dart';
+import 'ui/views/home/home_tab_view.dart';
 import 'ui/views/home/physiques/pysiques_view.dart';
+import 'ui/views/home/settings/profile_view.dart';
+import 'ui/views/home/tips/sub/health_tips_detail_view.dart';
+import 'ui/views/home/workout_plan/workout_plan.dart';
+import 'ui/views/login/login_view.dart';
+import 'ui/views/login/onboarding_view.dart';
+import 'ui/views/login/phone_view.dart';
+import 'ui/views/login/register_goal_view.dart';
+import 'ui/views/login/register_view.dart';
+import 'ui/views/login/verify_phone.view.dart';
+import 'ui/views/login/verify_view.dart';
 
 void main() {
   // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -36,9 +38,9 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
         title: 'Material App',
-        initialRoute: "/physiques",
+        initialRoute: "/workout",
         locale: data.savedLocale,
-        theme: ThemeData(fontFamily: "Poppins"),
+        theme: healthoTheme,
         routes: {
           // "/": (context) => SplashView(),
           "/": (context) => PhoneView(),
@@ -52,7 +54,8 @@ class MyApp extends StatelessWidget {
           "/hometab": (context) => HomeTabView(),
           "/profile": (context) => ProfileView(),
           "/healthTipsDetail": (context) => HealthTipsDetailView(),
-          "/physiques": (context) => PysiquesView()
+          "/physiques": (context) => PysiquesView(),
+          "/workout": (_) => WorkoutPlan()
         },
       ),
     );
