@@ -39,16 +39,13 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
         title: "Find a Workout Plan",
         decription: "Perfect Workout plan that fulfill your fitness goal",
         icon: Icons.search,
-        onPressed: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (_) => FindWorkoutPlan()));
-        },
+        onPressed: onNavigate,
       );
 
   Widget get myPlanCard => RoundedTextButton(
         color: yellowSearchCardColor,
         title: "My Plan",
-        onPressed: () {},
+        onPressed: onNavigate,
       );
 
   Widget get createNewCard => IconLabelCard(
@@ -59,6 +56,7 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
       );
 
   Widget get listViewHeader => ListViewHeader(
+        onPressed: onNavigateMuscle,
         righText: "More",
         leftText: "Muscle Building",
         rightColor: yellowSearchCardColor,

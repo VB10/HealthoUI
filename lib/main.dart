@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
           "/healthTipsDetail": (context) => HealthTipsDetailView(),
           "/physiques": (context) => PysiquesView(),
           "/workout": (_) => WorkoutPlan(),
-          "/exerciseTab": (_) => MuscleBinding(),
+          "/exerciseTab": (_) => ExerciseTab(),
         },
       ),
     );
