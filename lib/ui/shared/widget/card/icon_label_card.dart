@@ -33,11 +33,11 @@ class IconLabelCard extends StatelessWidget {
         contentPadding: EdgeInsets.all(SpaceValue.VERY_LOW),
         title: Text(title),
         subtitle: SubTitleText(decription),
-        leading: CircleCard(borderColor: yellowSearchCard, child: _icon),
+        leading: CircleCard(borderColor: yellowSearchCardColor, child: _icon),
       );
 
   Widget get _icon => BasePadding(
         level: BasePaddingLevel.LOW,
-        child: Icon(icon, color: yellowSearchCard),
+        child: Icon(icon, color: yellowSearchCardColor),
       );
 }

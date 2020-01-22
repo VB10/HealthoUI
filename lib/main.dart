@@ -1,13 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/tab/exercise_tab/exercise_tab_view.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/workout_plan/workout_plan.dart';
 
 import 'ui/shared/theme.dart';
+import 'ui/views/home/exercise_tab/tab/exercise_tab/exercise_tab.dart';
 import 'ui/views/home/home_tab_view.dart';
 import 'ui/views/home/physiques/pysiques_view.dart';
 import 'ui/views/home/settings/profile_view.dart';
 import 'ui/views/home/tips/sub/health_tips_detail_view.dart';
-import 'ui/views/home/workout_plan/workout_plan.dart';
 import 'ui/views/login/login_view.dart';
 import 'ui/views/login/onboarding_view.dart';
 import 'ui/views/login/phone_view.dart';
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
         ],
         supportedLocales: [Locale('en', 'US'), Locale('tr', 'TR')],
         title: 'Material App',
-        initialRoute: "/workout",
+        initialRoute: "/exerciseTab",
         locale: data.savedLocale,
         theme: healthoTheme,
         routes: {
@@ -55,7 +57,8 @@ class MyApp extends StatelessWidget {
           "/profile": (context) => ProfileView(),
           "/healthTipsDetail": (context) => HealthTipsDetailView(),
           "/physiques": (context) => PysiquesView(),
-          "/workout": (_) => WorkoutPlan()
+          "/workout": (_) => WorkoutPlan(),
+          "/exerciseTab": (_) => ExerciseTab(),
         },
       ),
     );
