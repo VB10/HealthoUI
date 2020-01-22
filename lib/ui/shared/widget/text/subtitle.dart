@@ -5,8 +5,9 @@ import '../../ui_helper.dart';
 class SubTitleText extends StatelessWidget {
   final String value;
   final Color color;
+  final double size;
 
-  const SubTitleText(this.value, {this.color});
+  const SubTitleText(this.value, {this.color, this.size});
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -14,7 +15,7 @@ class SubTitleText extends StatelessWidget {
       style: Theme.of(context).textTheme.subhead.copyWith(
           color: color,
           fontWeight: FontWeight.normal,
-          fontSize: FontSizeValue.VERY_LOW),
+          fontSize: size ?? FontSizeValue.VERY_LOW),
     );
   }
 }

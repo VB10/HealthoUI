@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../theme.dart';
+
 class RoundedRectangleCard extends StatelessWidget {
   final Color color;
   final Widget child;
@@ -12,7 +14,7 @@ class RoundedRectangleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: color,
+      color: color ?? greyCardColor,
       margin: EdgeInsets.all(marginValue ?? 0),
       shape: RoundedRectangleBorder(borderRadius: _radius(context)),
       child: child,

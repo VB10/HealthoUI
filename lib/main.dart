@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/find_workout_plan/find_workout_plan.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/muscle_binding/muscle_binding.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/tab/exercise_tab/exercise_tab_view.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/workout_plan/workout_plan.dart';
 
@@ -30,8 +32,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var data = EasyLocalizationProvider.of(context).data;
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.white));
+    // SystemChrome.setSystemUIOverlayStyle(
+    //     SystemUiOverlayStyle(statusBarColor: Colors.white));
     return EasyLocalizationProvider(
       data: data,
       child: MaterialApp(
@@ -58,7 +60,7 @@ class MyApp extends StatelessWidget {
           "/healthTipsDetail": (context) => HealthTipsDetailView(),
           "/physiques": (context) => PysiquesView(),
           "/workout": (_) => WorkoutPlan(),
-          "/exerciseTab": (_) => ExerciseTab(),
+          "/exerciseTab": (_) => MuscleBinding(),
         },
       ),
     );

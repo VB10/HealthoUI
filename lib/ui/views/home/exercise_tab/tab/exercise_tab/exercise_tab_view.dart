@@ -9,13 +9,11 @@ import './exercise_tab_view_model.dart';
 import '../../../../../shared/ui_helper.dart';
 
 class ExerciseTabView extends ExerciseTabViewModel {
-  final double indicatorWeight = 5;
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
-      initialIndex: 2,
+      initialIndex: workoutPlanIndex,
       child: Scaffold(
         appBar: _appBar,
         body: Column(
@@ -73,4 +71,12 @@ class ExerciseTabView extends ExerciseTabViewModel {
           ],
         ),
       );
+}
+
+extension _ExerciseTabView on ExerciseTabView {
+  int get workoutPlanIndex => 2;
+  int get exerciseIndex => 1;
+  int get challangesIndex => 3;
+  int get tabCount => 4;
+  double get indicatorWeight => 5;
 }

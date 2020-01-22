@@ -6,8 +6,10 @@ import 'package:healthoui/ui/shared/ui_helper.dart';
 import 'package:healthoui/ui/shared/widget/button/rounded_text_button.dart';
 import 'package:healthoui/ui/shared/widget/card/icon_label_card.dart';
 import 'package:healthoui/ui/shared/widget/header/listview_header.dart';
+import 'package:healthoui/ui/shared/widget/listview/padding_listview.dart';
 import 'package:healthoui/ui/shared/widget/padding/base_padding_enum.dart';
 import 'package:healthoui/ui/shared/widget/space/empty_space.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/find_workout_plan/find_workout_plan.dart';
 
 import './workout_plan_view_model.dart';
 
@@ -15,38 +17,54 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
   @override
   Widget build(BuildContext context) {
     // Replace this with your build function
-    return listView;
+    return _listView;
   }
 
-  ListView get listView {
-    return ListView(padding: EdgeInsets.all(10), children: <Widget>[
-      IconLabelCard(
+  Widget get _listView {
+    return PaddingListView(
+      spaceLevel: BasePaddingLevel.LOW,
+      widgets: <Widget>[
+        findWorkoutCard,
+        myPlanCard,
+        createNewCard,
+        listViewHeader,
+        aspectHorizontalList,
+        listViewSecondHeader,
+        aspectHorizontalListSecond
+      ],
+    );
+  }
+
+  Widget get findWorkoutCard => IconLabelCard(
         title: "Find a Workout Plan",
         decription: "Perfect Workout plan that fulfill your fitness goal",
         icon: Icons.search,
-        onPressed: () {},
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      RoundedTextButton(
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (_) => FindWorkoutPlan()));
+        },
+      );
+
+  Widget get myPlanCard => RoundedTextButton(
         color: yellowSearchCardColor,
         title: "My Plan",
         onPressed: () {},
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      IconLabelCard(
+      );
+
+  Widget get createNewCard => IconLabelCard(
         title: "Creat New Plan",
         decription: "Customise workout plans as per your",
         icon: Icons.add,
         onPressed: () {},
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      ListViewHeader(
+      );
+
+  Widget get listViewHeader => ListViewHeader(
         righText: "More",
         leftText: "Muscle Building",
         rightColor: yellowSearchCardColor,
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      AspectRatio(
+      );
+
+  Widget get aspectHorizontalList => AspectRatio(
         aspectRatio: 5 / 2,
         child: ListView.builder(
           itemCount: 5,
@@ -64,15 +82,15 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
             );
           },
         ),
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      ListViewHeader(
+      );
+
+  Widget get listViewSecondHeader => ListViewHeader(
         righText: "More",
         leftText: "Gain Strength",
         rightColor: yellowSearchCardColor,
-      ),
-      EmptySpace(level: BasePaddingLevel.LOW),
-      AspectRatio(
+      );
+
+  Widget get aspectHorizontalListSecond => AspectRatio(
         aspectRatio: 5 / 2,
         child: ListView.builder(
           itemCount: 5,
@@ -90,22 +108,7 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
             );
           },
         ),
-      )
-    ]);
-  }
-
-  AppBar get _appBar {
-    return AppBar(
-      /// [StatusBar] color light
-      brightness: Platform.isAndroid ? Brightness.light : Brightness.dark,
-      backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
-      elevation: 0,
-      leading: Image.asset(UIHelper.MENU_ICON),
-      title: Text("Healtho"),
-      centerTitle: false,
-      actions: <Widget>[IconButton(icon: Icon(Icons.search), onPressed: () {})],
-    );
-  }
+      );
 }
 
 // Before Atamoc
@@ -147,3 +150,22 @@ class WorkoutPlanView extends WorkoutPlanViewModel {
 //           SubTitleText("More", color: yellowSearchCardColor),
 //         ],
 //       ),
+
+// Base Padding List View
+//  ListView get listView {
+//     return ListView(padding: EdgeInsets.all(10), children: <Widget>[
+//       findWorkoutCard,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       myPlanCard,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       createNewCard,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       listViewHeader,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       aspectHorizontalList,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       listViewSecondHeader,
+//       EmptySpace(level: BasePaddingLevel.LOW),
+//       aspectHorizontalListSecond
+//     ]);
+//   }
