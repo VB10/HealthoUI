@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/find_workout_plan/find_workout_plan.dart';
+import 'package:healthoui/ui/views/home/exercise_tab/introduction/introduction.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/muscle_binding/muscle_binding.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/tab/exercise_tab/exercise_tab_view.dart';
 import 'package:healthoui/ui/views/home/exercise_tab/workout_plan/workout_plan.dart';

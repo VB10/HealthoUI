@@ -84,6 +84,7 @@ class MuscleBindingView extends MuscleBindingViewModel {
       );
 
   Widget get introCard => ListTile(
+        onTap: onPressed,
         trailing: Icon(Icons.chevron_right),
         title: Wrap(
           children: <Widget>[Text("Introduction"), SubTitleText(text)],
