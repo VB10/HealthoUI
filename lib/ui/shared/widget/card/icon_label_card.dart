@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:healthoui/ui/shared/widget/card/rounded_rectange_card.dart';
-import 'package:healthoui/ui/shared/widget/padding/base_padding.dart';
-import 'package:healthoui/ui/shared/widget/padding/base_padding_enum.dart';
-import 'package:healthoui/ui/shared/widget/text/subtitle.dart';
 
 import '../../theme.dart';
 import '../../ui_helper.dart';
+import '../padding/base_padding.dart';
+import '../padding/base_padding_enum.dart';
+import '../text/subtitle.dart';
 import 'circle_card.dart';
+import 'rounded_rectange_card.dart';
 
 class IconLabelCard extends StatelessWidget {
   final String title;

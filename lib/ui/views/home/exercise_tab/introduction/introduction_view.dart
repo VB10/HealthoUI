@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:healthoui/ui/shared/ui_helper.dart';
-import 'package:healthoui/ui/shared/widget/padding/base_padding_enum.dart';
-import 'package:healthoui/ui/shared/widget/space/empty_space.dart';
-import 'package:healthoui/ui/shared/widget/text/colum_text.dart';
-import 'package:healthoui/ui/shared/widget/text/column_text_reverse.dart';
-import 'package:healthoui/ui/shared/widget/text/subtitle.dart';
+
 import './introduction_view_model.dart';
+import '../../../../shared/ui_helper.dart';
+import '../../../../shared/widget/padding/base_padding_enum.dart';
+import '../../../../shared/widget/space/empty_space.dart';
+import '../../../../shared/widget/text/subtitle.dart';
 
 class IntroductionView extends IntroductionViewModel {
   @override
