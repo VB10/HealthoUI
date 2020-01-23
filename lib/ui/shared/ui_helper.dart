@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -52,4 +54,27 @@ class UIHelper {
   static Widget get horizontalSpace => SizedBox(
         width: dynamicWidth(Space35),
       );
+
+  static AppBar appBar(String text) => AppBar(
+        title: text == null ? text : Text(text),
+        brightness: Platform.isAndroid ? Brightness.light : Brightness.dark,
+        backgroundColor: UIHelper.SETTINGS_APP_BAR_COLOR,
+      );
+}
+
+class FontSizeValue {
+  static const double NORMAL = 25;
+  static const double HIGH = 20;
+  static const double MEDIUM = 15;
+  static const double LOW = 13;
+  static const double VERY_LOW = 10;
+}
+
+class SpaceValue {
+  static const double NORMAL = 40;
+  static const double HIGH = 60;
+  static const double MEDIUM = 30;
+  static const double LOW = 20;
+  static const double VERY_LOW = 15;
+  static const double VERY_LOW_HALF = 8;
 }
